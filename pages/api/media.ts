@@ -20,7 +20,7 @@ export default async function handler(
   const fileType = (req.query.fileType as string).split("/")[1];
   const fileName = req.query.fileName as string;
 
-  const Key = `media/${fileName}-${randomUUID()}.${fileType}`;
+  const Key = `deleteTest/${fileName}-${randomUUID()}.${fileType}`;
 
   const s3Params = {
     Bucket: process.env.BUCKET_NAME,
